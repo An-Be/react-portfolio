@@ -1,8 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap');
+:root {
+    --dark-blue: #020c1b;
+    --white: #ffffff;
+    --red: #c32f27;
+    --dark-red: #780116;
+    --yellow: #f7b538;
+    --light-orange: #db7c26;
+    --dark-orange: #d8572a;
+  }
+
 body{
     height: 100vh;
     margin: 0;
     padding: 0;
-    background-color: #020c1b;
+    background-color: var(--dark-blue);
     font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+}
+.icon{
+    font-family: 'Rubik Iso', cursive;
+    color: var(--red);
+}
+.link{
+    color:var(--yellow);
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid var(--white);
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+a{
+    color:var(--dark-orange);
+    text-decoration: none;
+    margin: 1rem;
+}
+a:hover{
+    color:var(--yellow);
 }
