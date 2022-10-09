@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,900;1,100&display=swap');
 :root {
     --dark-blue: #020c1b;
     --white: #ffffff;
     --red: #c32f27;
     --dark-red: #780116;
-    --yellow: #f7b538;
+    --yellow: #fdc435;
     --light-orange: #db7c26;
     --dark-orange: #d8572a;
     --light-grey: #E7E7E7;
@@ -17,11 +16,18 @@ body{
     padding: 0;
     box-sizing: border-box;
     /* background-color: var(--dark-blue); */
-    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f3fbff;
 }
 .App{
     height: 100vh;
     width: 100vw;
+    display: grid;
+    grid-template-columns: 100px 3fr;
+    grid-template-rows: 100vh;
+    grid-template-areas: 'sidebar home'
+                        'sidebar project'
+    ;
 }
 .icon{
     font-family: 'Rubik Iso', cursive;
@@ -44,7 +50,8 @@ nav {
     align-items: center;
 }
 a{
-    color:var(--dark-orange);
+    color: black;
+    font-weight: 100;
     text-decoration: none;
     margin: 1rem;
 }
@@ -53,9 +60,10 @@ a:hover{
 }
 
 .sidebar{
-    height: 100%;
+    grid-area: sidebar;
+    height: 100vh;
     width: 100px;
-    background-color: var(--light-grey);
+    background-color: var(--yellow);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -63,4 +71,25 @@ a:hover{
 }
 .tech{
     width: 200px;
+}
+.home{
+    grid-area: home;
+    margin-top: 2rem;
+}
+.projects{
+    grid-area: projects;
+}
+.home-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.personal-info{
+    width: 40rem;
+    font-weight: 200;
+    line-height: 2rem;
+
+}
+span{
+    color: var(--yellow);
 }
